@@ -195,13 +195,13 @@ Content-Type: application/problem+json
 
 *Preencham com base nos 6 cards. “Seguro” = não altera nada no servidor. “Idempotente” = repetir N vezes deixa o servidor no mesmo estado que 1 vez.*
 
-| ***Verbo**** | **********Para que serve******* | **Seguro?** | *Idempotente?* | ******Status típicos****** |
-|--------------|---------------------------------|-------------|----------------|----------------------------|
-| **`GET`***** | Consultar/obter um recurso ---- | ****Sim**** | *****Sim****** | `200`, `404` ------------- |
-| **`POST`**** | Criar um novo recurso --------- | ****Não**** | *****Não****** | `201`, `400`, `409` ------ |
-| **`PUT`***** | Substituir/atualizar um recurso | ****Não**** | *****Sim****** | `200`, `201`, `204`, `404` |
-| **`PATCH`*** | Alterar parcialmente um recurso | ****Não**** | *****Não****** | `200`, `204`, `400`, `404` |
-| **`DELETE`** | Excluir um recurso ------------ | ****Não**** | *****Sim****** | `204`, `404` ------------- |
+| **Verbo** | **Para que serve** | **Seguro?** | **Idempotente?** | **Status típicos** |
+|---|---|---|---|---|
+| **`GET`** | Consultar/obter um recurso | **Sim** | **Sim** | `200`, `404` |
+| **`POST`** | Criar um novo recurso | **Não** | **Não** | `201`, `400`, `409` |
+| **`PUT`** | Substituir/atualizar um recurso | **Não** | **Sim** | `200`, `201`, `204`, `404` |
+| **`PATCH`** | Alterar parcialmente um recurso | **Não** | **Não necessariamente** | `200`, `204`, `400`, `404` |
+| **`DELETE`** | Excluir um recurso | **Não** | **Sim** | `204`, `404` |
 
 
 ## DESAFIO
